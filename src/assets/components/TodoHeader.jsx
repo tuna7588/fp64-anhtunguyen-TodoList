@@ -1,5 +1,5 @@
 export const TodoHeader = () => (
-  <div id="header">
+  <div className="header">
     <h2>Todo List</h2>
   </div>
 );

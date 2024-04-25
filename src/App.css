@@ -8,22 +8,22 @@ body {
   padding: 50;
 }
 
-#app {
+.app {
   margin: auto;
   width: 500px;
   padding: 0px 15px;
 }
 
-#header {
+.header {
   margin: auto;
   text-align: center;
 }
 
-#form {
+.form {
   margin-bottom: 40px;
 }
 
-#form__input {
+.form__input {
   float: left;
   font-size: 16px;
   padding: 6px 8px;
@@ -31,7 +31,7 @@ body {
   width: 80%;
 }
 
-#form__submit {
+.form__submit {
   float: right;
   padding: 10px;
   background-color: darkorange;
@@ -40,17 +40,17 @@ body {
   border-radius: 5px;
 }
 
-#form__submit:hover {
+.form__submit:hover {
   background-color: #d17300;
 }
 
-#todolist {
+.todo__list {
   width: 100%;
   list-style: none;
   padding-left: 0px;
 }
 
-#todo {
+.todo {
   border-style: solid;
   border-width: 1px;
   border-color: #d8d8d8;
@@ -61,10 +61,8 @@ body {
   padding: 20px 20px;
 }
 
-#todo__label {
-}
 
-#todo__delete {
+.todo__delete {
   padding: 10px;
   display: inline-block;
   border: none;
@@ -75,12 +73,37 @@ body {
   top: 12px;
 }
 
-#todo__delete:hover {
+.todo__delete:hover {
   background-color: #b80000;
 }
 
-#footer {
-  margin: 10px 0px;
-  text-align: center;
-  font-size: small;
+.search__container {
+  max-width: 400px;
+  margin: 0 auto;
 }
+
+.search__input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.search__list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.search__item {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.search__item:hover {
+  background-color: #e0e0e0;
+}
+

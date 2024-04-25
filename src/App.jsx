@@ -5,26 +5,24 @@ import './App.css'
 import { TodoHeader } from './assets/components/TodoHeader.jsx'
 import { TodoForm } from './assets/components/TodoForm.jsx'
 import { TodoList } from './assets/components/TodoList.jsx'
-
+import { TodoSearch } from './assets/components/TodoSearch.jsx'
 
 
   const App = () => {
     const [messageList, setMessageList] = useState(["Learn React","Buy Hans Thermomix","Get a job"]);
-  
+    
     const addTodo = (message) => {
       setMessageList([...messageList, message]);
     };
   
-    const deleteTodo = (message) => {
-      let deleteMessageIndex = messageList.indexOf(message);
-      setMessageList([
-        ...messageList.slice(0, deleteMessageIndex),
-        ...messageList.slice(deleteMessageIndex + 1)
-      ]);
+    const deleteTodo = (messageToDelete) => {
+      const updateMessageList = messageList.filter(message => message !== messageToDelete)
+      setMessageList(updateMessageList)
     };
   
     return (
-      <div id="app">
+      <div className="app">
+        <TodoSearch todos={messageList} />
         <TodoHeader />
         <TodoForm addTodo={addTodo} /> <br /> 
         <TodoList messageList={messageList} deleteTodo={deleteTodo} />

@@ -1,5 +1,5 @@
 export const TodoList = ({ messageList, deleteTodo }) => (
-  <ol id="todolist">
+  <ol className="todo__list">
     {messageList.map((message, index) => (
       <Todo message={message} deleteTodo={deleteTodo} key={index} />
     ))}
@@ -7,15 +7,15 @@ export const TodoList = ({ messageList, deleteTodo }) => (
 );
 
 const Todo = ({ message, deleteTodo }) => {
-  const handleSubmit = (event) => {
+  const handleDelete = () => {
     deleteTodo(message);
   };
 
   return (
-    <li id="todo">
-      <span id="todo__label">{message + "  "}</span>
-      <button id="todo__delete" onClick={handleSubmit}>
-        Delete
+    <li className="todo">
+      <span className="todo__label">{message}</span>
+      <button className="todo__delete" onClick={handleDelete}>
+        X
       </button>
     </li>
   );
