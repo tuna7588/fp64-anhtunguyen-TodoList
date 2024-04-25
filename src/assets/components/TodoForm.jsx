@@ -15,6 +15,7 @@ export const TodoForm = ({ addTodo }) => {
   return (
     <div className="form">
       <input
+      id='f_Input'
         className="form__input"
         type="text"
         value={input}

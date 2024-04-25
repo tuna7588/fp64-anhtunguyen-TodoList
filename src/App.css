@@ -6,6 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 50;
+  background-image: url("3.gif");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .app {
@@ -15,12 +19,20 @@ body {
 }
 
 .header {
-  margin: auto;
+  margin: 0;
   text-align: center;
+  color: white;
+}
+
+.header h2 {
+  margin: 3%;
+  font-size: 250%;
 }
 
 .form {
   margin-bottom: 40px;
+  min-height: 20%;
+  
 }
 
 .form__input {
@@ -29,6 +41,12 @@ body {
   padding: 6px 8px;
   box-sizing: border-box; /* Just to ensure the padding is included in the size of the box*/
   width: 80%;
+  min-height: 41px
+}
+
+#f_Input{
+  border: 0;
+  border-radius: 5px;
 }
 
 .form__submit {
@@ -63,14 +81,16 @@ body {
 
 
 .todo__delete {
-  padding: 10px;
+  padding: 4px;
+  padding-bottom: 2px;
   display: inline-block;
   border: none;
   background-color: red;
   color: white;
   position: absolute;
-  right: 20px;
-  top: 12px;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
 }
 
 .todo__delete:hover {
@@ -78,14 +98,15 @@ body {
 }
 
 .search__container {
-  max-width: 400px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
 .search__input {
-  width: 100%;
+  
+  width: 96%;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
@@ -101,6 +122,7 @@ body {
   padding: 10px;
   margin-bottom: 5px;
   border-radius: 5px;
+  width: 96%;
 }
 
 .search__item:hover {
